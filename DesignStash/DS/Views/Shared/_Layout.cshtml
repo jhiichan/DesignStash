@@ -1,0 +1,97 @@
+﻿@{
+    String PLTypeKitURL = System.Web.Configuration.WebConfigurationManager.AppSettings["PL_TypeKitURL"];
+    String MaterialIconsURL = System.Web.Configuration.WebConfigurationManager.AppSettings["MaterialIconsURL"];
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Design Stash</title>
+    <link rel="icon" href="~/favicon.ico" />
+    <link href="~/Bundles/Styles/libraries-bundle.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="@MaterialIconsURL" rel="stylesheet">
+    <link href="@PLTypeKitURL" rel="stylesheet" />
+    @RenderSection("Styles", false)
+</head>
+<body ng-app="PLApp" ng-cloak>
+    <div class="body-container" ng-controller="PatternLibraryController as patLibCtrl" layout="column" ng-cloak>
+        <section layout="row" flex>
+            <md-sidenav class="md-sidenav-left pl-sidenav-left"
+                        md-is-locked-open="$mdMedia('gt-sm')"
+                        md-component-id="pl-sidenav-left"
+                        md-whiteframe="4">
+                <md-toolbar class="md-theme-indigo">
+                    <h1 class="md-toolbar-tools">
+                        <md-button hide-gt-sm ng-click="toggleSideNavLeft('pl-sidenav-left')" class="md-icon-button"><i class="material-icons">arrow_back</i></md-button>
+                        &nbsp;
+                        <md-button class="md-icon-button" href="/"><i class="material-icons">home</i></md-button>
+                        &nbsp;
+                        @ViewBag.Title
+                    </h1>
+                </md-toolbar>
+                <md-content class="pl-sidenav-container" ng-controller="SideNavController as sideNavCtrl" ng-init="sideNavCtrl.init('@ViewBag.Project')">
+                    <div class="pl-sidenav-item-container" ng-if="sideNavCtrl.atoms.length > 0 && sideNavCtrl.atoms != null">
+                        <div class="pl-sidenav-item">
+                            <a href="#pl-atoms">Atoms</a>
+                        </div>
+                        <div class="pl-sidenav-sub-item-container">
+                            <div class="pl-sidenav-sub-item" ng-repeat="atom in sideNavCtrl.atoms">
+                                <a ng-href="#pl-{{atom.group}}">{{atom.display}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pl-sidenav-item-container" ng-if="sideNavCtrl.molecules.length > 0 && sideNavCtrl.molecules != null">
+                        <div class="pl-sidenav-item">
+                            <a href="#pl-molecules">Molecules</a>
+                        </div>
+                        <div class="pl-sidenav-sub-item-container">
+                            <div class="pl-sidenav-sub-item" ng-repeat="molecule in sideNavCtrl.molecules">
+                                <a ng-href="#pl-{{molecule.group}}">{{molecule.display}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pl-sidenav-item-container" ng-if="sideNavCtrl.organisms.length > 0 && sideNavCtrl.organisms != null">
+                        <div class="pl-sidenav-item">
+                            <a href="#pl-organisms">Organisms</a>
+                        </div>
+                        <div class="pl-sidenav-sub-item-container">
+                            <div class="pl-sidenav-sub-item" ng-repeat="organism in sideNavCtrl.organisms">
+                                <a ng-href="#pl-{{organism.group}}">{{organism.display}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pl-sidenav-item-container" ng-if="sideNavCtrl.templates.length > 0 && sideNavCtrl.templates != null">
+                        <div class="pl-sidenav-item">
+                            <a href="#pl-templates">Templates</a>
+                        </div>
+                        <div class="pl-sidenav-sub-item-container">
+                            <div class="pl-sidenav-sub-item" ng-repeat="template in sideNavCtrl.templates">
+                                <a ng-href="#pl-{{template.group}}">{{template.display}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </md-content>
+            </md-sidenav>
+
+            <md-content flex>
+                <md-toolbar hide-gt-sm>
+                    <div class="md-toolbar-tools">
+                        <md-button ng-click="toggleSideNavLeft('pl-sidenav-left')" class="md-icon-button"><i class="material-icons">menu</i></md-button>
+                    </div>
+                </md-toolbar>
+
+                <md-content layout-padding>
+                    @RenderBody()
+                </md-content>
+            </md-content>
+        </section>
+    </div>
+
+    <script src="~/Bundles/Scripts/libraries-bundle.min.js"></script>
+    <script src="~/Bundles/Scripts/core-bundle.min.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>

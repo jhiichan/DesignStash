@@ -1,0 +1,32 @@
+﻿[
+  {
+    "group": "buttons",
+    "display": "Buttons",
+    "components": [
+      {
+        "name": "default",
+        "display": "Default Button",
+        "width": "half",
+        "showCode": false
+      },
+      {
+        "name": "defaultdisabled",
+        "display": "Disabled",
+        "width": "half",
+        "showCode": false
+      },
+      {
+        "name": "gotosite",
+        "display": "Go To Button",
+        "width": "half",
+        "showCode": false
+      },
+      {
+        "name": "download",
+        "display": "Download Button",
+        "width": "half",
+        "showCode": false
+      }
+    ]
+  }
+]

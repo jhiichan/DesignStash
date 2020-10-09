@@ -1,0 +1,29 @@
+﻿@{
+    String PLTypeKitURL = System.Web.Configuration.WebConfigurationManager.AppSettings["PL_TypeKitURL"];
+    String MaterialIconsURL = System.Web.Configuration.WebConfigurationManager.AppSettings["MaterialIconsURL"];
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Stash</title>
+    <link rel="icon" href="~/favicon.ico" />
+    <link href="~/Bundles/Styles/libraries-bundle.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/home.css" rel="stylesheet" />
+    <link href="@MaterialIconsURL" rel="stylesheet">
+    <link href="@PLTypeKitURL" rel="stylesheet" />
+    @RenderSection("Styles", false)
+</head>
+<body ng-app="PLApp" ng-cloak>
+
+    @RenderBody()
+
+    <script src="~/Bundles/Scripts/libraries-bundle.min.js"></script>
+    <script src="~/Bundles/Scripts/core-bundle.min.js"></script>
+    <script src="~/Scripts/Controllers/home.controller.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>
