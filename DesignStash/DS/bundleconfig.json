@@ -1,0 +1,45 @@
+[
+  {
+    "outputFileName": "Bundles/Styles/libraries-bundle.css",
+    "inputFiles": [
+      "Content/Libraries/angular-material.css",
+      "Content/Libraries/angular-material.layout-attributes.css",
+      "Content/Libraries/angular-material.layout-attributes.min.css",
+      "Content/Libraries/angular-material.layouts.css",
+      "Content/Libraries/angular-material.layouts.ie_fixes.css",
+      "Content/Libraries/angular-material.layouts.min.css",
+      "Content/Libraries/angular-material.min.css"
+    ]
+  },
+  {
+    "outputFileName": "Bundles/Scripts/libraries-bundle.js",
+    "inputFiles": [
+      "Scripts/Libraries/angular.js",
+      "Scripts/Libraries/angular-animate.js",
+      "Scripts/Libraries/angular-aria.js",
+      "Scripts/Libraries/angular-material.js"
+    ]
+  },
+  {
+    "outputFileName": "Bundles/Scripts/core-bundle.js",
+    "inputFiles": [
+      "Scripts/pl.app.js",
+      "Scripts/Services/pattern.service.js",
+      "Scripts/Controllers/patternlibrary.controller.js",
+      "Scripts/Controllers/patterns.controller.js",
+      "Scripts/Controllers/sidenav.controller.js"
+    ]
+  },
+  {
+    "outputFileName": "External_Library/DesignStash/designstash-styles.min.css",
+    "inputFiles": [
+      "Content/designstash-styles.css"
+    ]
+  },
+  {
+    "outputFileName": "External_Library/DesignStash/designstash-scripts.min.js",
+    "inputFiles": [
+      "Scripts/Themes/designstash.theme.js"
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+﻿/* Override Material */
+.md-button.md-primary.md-raised:not([disabled]) {
+    color: #ffffff;
+    font-weight: 700;
+}

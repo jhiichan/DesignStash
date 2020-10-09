@@ -1,0 +1,146 @@
+﻿body {
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.body-container,
+.pl-render-body {
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.footer-container {
+    height: 80px;
+    padding: 15px;
+    text-align: right;
+    color: #fff;
+    background-color: #333333;
+}
+
+/* Pattern Library Styles */
+.pl-sidenav-left {
+    min-height: 100%;
+}
+
+.pl-sidenav-container > div:first-child {
+    margin-top: 5px;
+}
+
+.pl-sidenav-item {
+    font-size: 1.17em;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+    .pl-sidenav-item:hover {
+        cursor: pointer;
+        background-color: #cecece;
+    }
+
+    .pl-sidenav-item > a {
+        text-decoration: none;
+        color: #000000;
+        display:inline-block;
+        width:100%;
+        height:100%;
+    }
+
+.pl-sidenav-sub-item {
+    padding: 5px 25px;
+}
+
+    .pl-sidenav-sub-item:hover {
+        cursor: pointer;
+        background-color: #cecece;
+    }
+
+    .pl-sidenav-sub-item > a {
+        text-decoration: none;
+        color: #000000;
+        display:inline-block;
+        width:100%;
+        height:100%;
+    }
+
+.pl-group-container {
+    margin-top: 30px;
+}
+
+.pl-group-text {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pl-component-text {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.pl-info-container {
+    padding: 15px 20px;
+}
+
+.pl-sample-container {
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.pl-demo-container, .pl-code-container-open {
+    padding: 40px;
+}
+
+.pl-demo-container {
+    position: relative;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.pl-code {
+    display: block;
+    font-family: source-code-pro, monospace;
+    font-weight: 400;
+    font-style: normal;
+    white-space: pre;
+}
+
+.pl-code-container-open {
+    white-space: nowrap;
+    overflow-x: auto;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+}
+
+.pl-code-container-close {
+    padding: 0 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+}
+
+.pl-button-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.pl-button {
+    cursor: pointer;
+    font-size: 12px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* Override Material */
