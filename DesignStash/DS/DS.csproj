@@ -255,13 +255,13 @@
     <Content Include="Scripts\Libraries\angular.min.js.map" />
     <Content Include="Views\PatternLibrary\Index.cshtml" />
     <Content Include="Views\PatternLibrary\Preview.cshtml" />
-    <Content Include="Views\PatternLibrary\DesignStashPreview.cshtml" />
-    <Content Include="Views\PatternLibrary\DesignStashTheme.cshtml" />
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
     <Content Include="Patterns\DesignStash\atoms\data.json" />
     <Content Include="Patterns\DesignStash\molecules\data.json" />
     <Content Include="Patterns\DesignStash\organisms\data.json" />
     <Content Include="Patterns\DesignStash\templates\data.json" />
+    <Content Include="Views\PatternLibrary\Theme.cshtml" />
+    <Content Include="Patterns\data.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
