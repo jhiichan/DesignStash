@@ -16,8 +16,10 @@ namespace DS.Controllers
         }
 
         [Route("Theme")]
-        public ActionResult Theme()
+        public ActionResult Theme(string name, string display)
         {
+            ViewBag.Title = display + " Theme";
+            ViewBag.Project = name;
             return View();
         }
 

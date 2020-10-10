@@ -1,9 +1,4 @@
 ﻿
-@{
-    ViewBag.Title = Request.QueryString["display"] + " Theme";
-    ViewBag.Project = Request.QueryString["name"];
-}
-
 @section Styles {
     <link href="~/External_Library/@ViewBag.Project/@ViewBag.Project-styles.min.css" rel="stylesheet" />
 }
