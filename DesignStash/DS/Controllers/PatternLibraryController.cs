@@ -15,24 +15,21 @@ namespace DS.Controllers
             return View();
         }
 
-        [Route("Theme/DesignStash")]
-        public ActionResult DesignStashTheme()
+        [Route("Theme")]
+        public ActionResult Theme(string name, string display)
         {
-            return View();
-        }
-
-        [Route("Theme/DesignStash/Preview")]
-        public ActionResult DesignStashPreview(string pl, string pg, string pn)
-        {
-            ViewBag.patternLevel = pl;
-            ViewBag.patternGroup = pg;
-            ViewBag.patternName = pn;
+            ViewBag.Title = display + " Theme";
+            ViewBag.Project = name;
             return View();
         }
 
         [Route("Preview")]
-        public ActionResult Preview()
+        public ActionResult Preview(string theme = null, string pl = null, string pg = null, string pn = null)
         {
+            ViewBag.theme = theme;
+            ViewBag.patternLevel = pl;
+            ViewBag.patternGroup = pg;
+            ViewBag.patternName = pn;
             return View();
         }
     }
