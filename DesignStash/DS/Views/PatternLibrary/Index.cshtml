@@ -1,4 +1,3 @@
-﻿
 @{ Layout = "~/Views/Shared/_HomeLayout.cshtml"; }
 
 <div ng-controller="HomeController as homeCtrl" ng-init="homeCtrl.init()">
@@ -19,3 +18,21 @@
 @section Scripts {
     <script src="~/External_Library/DesignStash/designstash-scripts.min.js"></script>
 }
+
+@{
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+    String GDriveViewURL = System.Web.Configuration.WebConfigurationManager.AppSettings["GDriveViewURL"];
+}
+
+<div class="pl-header-container tk-source-code-pro">
+    <h1>Select A Theme</h1>
+</div>
+<div class="pl-patternlibraries-list-container" layout="row" layout-align="center center" layout-wrap>
+    <md-card flex="100" flex-gt-sm="45" md-theme="dark-grey">
+        <md-button class="md-primary" ng-href="@Url.Action("DesignStashTheme", "PatternLibrary")" target="" ng-disabled="">
+            <md-card-content layout="row" layout-align="center center">
+                <div class="card-media">Design Stash</div>
+            </md-card-content>
+        </md-button>
+    </md-card>
+</div>

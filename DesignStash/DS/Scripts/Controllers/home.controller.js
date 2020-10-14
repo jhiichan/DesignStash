@@ -18,6 +18,12 @@
             Pattern.GetThemes().then(function (data) {
                 thisCtrl.themes = data.data;
             });
+          
+    HomeController.$inject = ['$scope', '$timeout', '$mdSidenav'];
+
+    function HomeController($scope, $timeout, $mdSidenav) {
+        $scope.toggleSideNavLeft = function (componentID) {
+            $mdSidenav(componentID).toggle();
         };
     }
 

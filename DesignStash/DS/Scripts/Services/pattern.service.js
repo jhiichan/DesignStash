@@ -11,7 +11,8 @@
         return {
             GetPatternSrc: GetPatternSrc,
             GetPatternData: GetPatternData,
-            GetThemes: GetThemes
+            GetThemes: GetThemes,
+            GetPatternData: GetPatternData
         }
 
         function GetPatternSrc(project, level, group, name) {

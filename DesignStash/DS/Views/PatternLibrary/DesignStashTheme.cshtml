@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Design Stash Theme";
+    ViewBag.Project = "DesignStash";
+}
+
+@section Styles {
+    <link href="~/External_Library/DesignStash/designstash-styles.min.css" rel="stylesheet" />
+}
+
+<div ng-controller="PatternsController as patternsCtrl" ng-init="patternsCtrl.init('@ViewBag.Project', 'atoms')">
+    <div class="pl-group-container" ng-repeat="pattern in patternsCtrl.patterns">
+        <div id="pl-{{pattern.group}}" class="pl-group-text">{{pattern.display}}</div>
+        <div layout="row" layout-xs="column" layout-wrap>
+            <div class="pl-info-container" flex="{{component.width == 'full' ? 100:50}}" flex-xs="100" ng-repeat="component in pattern.components">
+                <div id="pl-{{pattern.group}}-{{component.name}}" class="pl-component-text">{{component.display}}</div>
+                <div class="pl-sample-container">
+                    <div class="pl-demo-container" ng-include="patternsCtrl.getPatternSrc(pattern.group, component.name)">
+
+                    </div>
+                    <div ng-class="component.showCode ? 'pl-code-container-open':'pl-code-container-close'">
+                        <div class="pl-code">{{patternsCtrl.getCode(pattern.group, component.name)}}</div>
+                    </div>
+                    <div class="pl-button-container">
+                        <a class="pl-button" ng-click="patternsCtrl.toggleShowCode($parent.$index, $index)"><span ng-hide="component.showCode">SHOW</span><span ng-show="component.showCode">HIDE</span> SAMPLE CODE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-controller="PatternsController as patternsCtrl" ng-init="patternsCtrl.init('@ViewBag.Project', 'molecules')">
+    <div class="pl-group-container" ng-repeat="pattern in patternsCtrl.patterns">
+        <div id="pl-{{pattern.group}}" class="pl-group-text">{{pattern.display}}</div>
+        <div layout="row" layout-xs="column" layout-wrap>
+            <div class="pl-info-container" flex="{{component.width == 'full' ? 100:50}}" flex-xs="100" ng-repeat="component in pattern.components">
+                <div id="pl-{{pattern.group}}-{{component.name}}" class="pl-component-text">{{component.display}}</div>
+                <div class="pl-sample-container">
+                    <div class="pl-demo-container" ng-include="patternsCtrl.getPatternSrc(pattern.group, component.name)">
+
+                    </div>
+                    <div ng-class="component.showCode ? 'pl-code-container-open':'pl-code-container-close'">
+                        <div class="pl-code">{{patternsCtrl.getCode(pattern.group, component.name)}}</div>
+                    </div>
+                    <div class="pl-button-container">
+                        <a class="pl-button" ng-click="patternsCtrl.toggleShowCode($parent.$index, $index)"><span ng-hide="component.showCode">SHOW</span><span ng-show="component.showCode">HIDE</span> SAMPLE CODE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-controller="PatternsController as patternsCtrl" ng-init="patternsCtrl.init('@ViewBag.Project', 'organisms')">
+    <div class="pl-group-container" ng-repeat="pattern in patternsCtrl.patterns">
+        <div id="pl-{{pattern.group}}" class="pl-group-text">{{pattern.display}}</div>
+        <div layout="row" layout-xs="column" layout-wrap>
+            <div class="pl-info-container" flex="{{component.width == 'full' ? 100:50}}" flex-xs="100" ng-repeat="component in pattern.components">
+                <div id="pl-{{pattern.group}}-{{component.name}}" class="pl-component-text">{{component.display}}</div>
+                <div class="pl-sample-container">
+                    <div class="pl-demo-container" ng-hide="component.width === 'page'" ng-include="patternsCtrl.getPatternSrc(pattern.group, component.name)">
+
+                    </div>
+                    <div class="pl-demo-container" ng-show="component.width === 'page'">
+                        This pattern needs to be viewed in full page. <a ng-href="{{'/Theme/DesignStash/Preview?pl=organisms&pg=' + pattern.group + '&pn=' + component.name}}">Click here to view in full page.</a>
+                    </div>
+                    <div ng-class="component.showCode ? 'pl-code-container-open':'pl-code-container-close'">
+                        <div class="pl-code">{{patternsCtrl.getCode(pattern.group, component.name)}}</div>
+                    </div>
+                    <div class="pl-button-container">
+                        <a class="pl-button" ng-click="patternsCtrl.toggleShowCode($parent.$index, $index)"><span ng-hide="component.showCode">SHOW</span><span ng-show="component.showCode">HIDE</span> SAMPLE CODE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/External_Library/DesignStash/designstash-scripts.min.js"></script>
+}
