@@ -184,7 +184,6 @@
     <Content Include="Content\Libraries\angular-material.layouts.ie_fixes.css" />
     <Content Include="Content\Libraries\angular-material.layouts.min.css" />
     <Content Include="Content\Libraries\angular-material.min.css" />
-    <Content Include="External_Library\DesignStash\designstash-scripts.min.js" />
     <Content Include="External_Library\DesignStash\designstash-styles.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -211,6 +210,8 @@
     <Content Include="Patterns\DesignStash\atoms\buttons\defaultdisabled.html" />
     <Content Include="Patterns\DesignStash\atoms\buttons\download.html" />
     <Content Include="Patterns\DesignStash\atoms\buttons\gotosite.html" />
+    <Content Include="Patterns\DesignStash\atoms\buttons\warn.html" />
+    <Content Include="Patterns\DesignStash\atoms\buttons\accentraised.html" />
     <Content Include="Scripts\Controllers\home.controller.js" />
     <Content Include="Scripts\Controllers\patternlibrary.controller.js" />
     <Content Include="Scripts\Controllers\patterns.controller.js" />
