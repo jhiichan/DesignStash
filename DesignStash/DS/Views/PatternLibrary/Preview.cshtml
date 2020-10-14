@@ -1,20 +1,41 @@
 ﻿
 @{
+    ViewBag.Title = "Preview";
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 
-@section Styles {
-    @* Design Stash Styles *@
-    <link href="~/External_Library/DesignStash/designstash-styles.min.css" rel="stylesheet" />
-}
+@if (ViewBag.theme != null)
+{
+    @section Styles {
+        <link href="~/External_Library/@ViewBag.theme/@ViewBag.theme-styles.min.css" rel="stylesheet" />
+    }
 
-    <div class="pl-render-body" ng-controller="HomeController as homeCtrl" layout="column" ng-cloak>
-        @* Place HTML Here *@
-        <div>Test</div>
+    <div ng-controller="PatternsController as patternsCtrl"
+         ng-init="patternsCtrl.init('@ViewBag.theme', '@ViewBag.patternLevel')"
+         ng-include="patternsCtrl.getPatternSrc('@ViewBag.patternGroup', '@ViewBag.patternName')"
+         class="pl-render-body"
+         layout="column"
+         ng-cloak>
+
     </div>
 
-@section Scripts {
-    @* Design Stash Scripts *@
-    <script src="~/External_Library/DesignStash/designstash-scripts.min.js"></script>
+    @section Scripts {
+        <script src="~/External_Library/@ViewBag.theme/@ViewBag.theme-scripts.min.js"></script>
+    }
 }
+else
+{
+    @section Styles {
+        <link href="~/External_Library/DesignStash/designstash-styles.min.css" rel="stylesheet" />
+    }
 
+    <div class="pl-render-body" ng-controller="HomeController as homeCtrl" layout="column" ng-cloak>
+        @* vv Place HTML Here vv *@
+        Test
+        @* ^^ Place HTML Here ^^ *@
+    </div>
+
+    @section Scripts {
+        <script src="~/External_Library/DesignStash/designstash-scripts.min.js"></script>
+    }
+}

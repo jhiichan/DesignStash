@@ -10,7 +10,8 @@
 
         return {
             GetPatternSrc: GetPatternSrc,
-            GetPatternData: GetPatternData
+            GetPatternData: GetPatternData,
+            GetThemes: GetThemes
         }
 
         function GetPatternSrc(project, level, group, name) {
@@ -20,6 +21,10 @@
 
         function GetPatternData(project, level) {
             return $http.get(origin + '/Patterns/' + project + '/' + level + '/data.json');
+        }
+
+        function GetThemes() {
+            return $http.get(origin + '/Patterns/data.json');
         }
     }
 })();

@@ -1,11 +1,6 @@
 ﻿
-@{
-    ViewBag.Title = "Design Stash Theme";
-    ViewBag.Project = "DesignStash";
-}
-
 @section Styles {
-    <link href="~/External_Library/DesignStash/designstash-styles.min.css" rel="stylesheet" />
+    <link href="~/External_Library/@ViewBag.Project/@ViewBag.Project-styles.min.css" rel="stylesheet" />
 }
 
 <div ng-controller="PatternsController as patternsCtrl" ng-init="patternsCtrl.init('@ViewBag.Project', 'atoms')">
@@ -63,7 +58,7 @@
 
                     </div>
                     <div class="pl-demo-container" ng-show="component.width === 'page'">
-                        This pattern needs to be viewed in full page. <a ng-href="{{'/Theme/DesignStash/Preview?pl=organisms&pg=' + pattern.group + '&pn=' + component.name}}">Click here to view in full page.</a>
+                        This pattern needs to be viewed in full page. <a ng-href="{{'Preview?theme=' + patternsCtrl.project + '&pl=organisms&pg=' + pattern.group + '&pn=' + component.name}}">Click here to view in full page.</a>
                     </div>
                     <div ng-class="component.showCode ? 'pl-code-container-open':'pl-code-container-close'">
                         <div class="pl-code">{{patternsCtrl.getCode(pattern.group, component.name)}}</div>
@@ -78,5 +73,5 @@
 </div>
 
 @section Scripts {
-    <script src="~/External_Library/DesignStash/designstash-scripts.min.js"></script>
+    <script src="~/External_Library/@ViewBag.Project/@ViewBag.Project-scripts.min.js"></script>
 }

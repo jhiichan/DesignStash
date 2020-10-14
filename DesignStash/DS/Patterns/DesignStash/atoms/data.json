@@ -16,6 +16,18 @@
         "showCode": false
       },
       {
+        "name": "warn",
+        "display": "Warn",
+        "width": "half",
+        "showCode": false
+      },
+      {
+        "name": "accentraised",
+        "display": "Raised Accent",
+        "width": "half",
+        "showCode": false
+      },
+      {
         "name": "gotosite",
         "display": "Go To Button",
         "width": "half",
