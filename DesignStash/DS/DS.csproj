@@ -184,8 +184,8 @@
     <Content Include="Content\Libraries\angular-material.layouts.ie_fixes.css" />
     <Content Include="Content\Libraries\angular-material.layouts.min.css" />
     <Content Include="Content\Libraries\angular-material.min.css" />
-    <Content Include="External_Library\DesignStash\designstash-scripts.min.js" />
     <Content Include="External_Library\DesignStash\designstash-styles.min.css" />
+    <Content Include="External_Library\DesignStash\designstash-theme.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -207,12 +207,14 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <Content Include="Patterns\DesignStash\atoms\buttons\accentraised.html" />
-    <Content Include="Patterns\DesignStash\atoms\buttons\default.html" />
-    <Content Include="Patterns\DesignStash\atoms\buttons\defaultdisabled.html" />
-    <Content Include="Patterns\DesignStash\atoms\buttons\download.html" />
-    <Content Include="Patterns\DesignStash\atoms\buttons\gotosite.html" />
-    <Content Include="Patterns\DesignStash\atoms\buttons\warn.html" />
+    <Content Include="Patterns\DesignStash\atoms\icons\colored.html" />
+    <Content Include="Patterns\DesignStash\atoms\textbuttons\accentraised.html" />
+    <Content Include="Patterns\DesignStash\atoms\textbuttons\primaryraised.html" />
+    <Content Include="Patterns\DesignStash\atoms\textbuttons\primaryraiseddisabled.html" />
+    <Content Include="Patterns\DesignStash\atoms\icons\default.html" />
+    <Content Include="Patterns\DesignStash\molecules\textbuttonswicon\download.html" />
+    <Content Include="Patterns\DesignStash\molecules\textbuttonswicon\gotosite.html" />
+    <Content Include="Patterns\DesignStash\atoms\textbuttons\warn.html" />
     <Content Include="Scripts\Controllers\home.controller.js" />
     <Content Include="Scripts\Controllers\patternlibrary.controller.js" />
     <Content Include="Scripts\Controllers\patterns.controller.js" />
@@ -229,7 +231,7 @@
     <Content Include="Scripts\Libraries\angular.min.js" />
     <Content Include="Scripts\pl.app.js" />
     <Content Include="Scripts\Services\pattern.service.js" />
-    <Content Include="Scripts\Themes\designstash.theme.js" />
+    <Content Include="Scripts\Themes\designstash-theme.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

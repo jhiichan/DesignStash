@@ -1,17 +1,35 @@
 ﻿[
   {
-    "group": "buttons",
-    "display": "Buttons",
+    "group": "icons",
+    "display": "Icons",
     "components": [
       {
         "name": "default",
-        "display": "Default Button",
+        "display": "Default",
         "width": "half",
         "showCode": false
       },
       {
-        "name": "defaultdisabled",
-        "display": "Disabled",
+        "name": "colored",
+        "display": "Colored",
+        "width": "half",
+        "showCode": false
+      }
+    ]
+  },
+  {
+    "group": "textbuttons",
+    "display": "Text Buttons",
+    "components": [
+      {
+        "name": "primaryraised",
+        "display": "Primary Raised",
+        "width": "half",
+        "showCode": false
+      },
+      {
+        "name": "primaryraiseddisabled",
+        "display": "Primary Raised Disabled",
         "width": "half",
         "showCode": false
       },
@@ -24,18 +42,6 @@
       {
         "name": "accentraised",
         "display": "Raised Accent",
-        "width": "half",
-        "showCode": false
-      },
-      {
-        "name": "gotosite",
-        "display": "Go To Button",
-        "width": "half",
-        "showCode": false
-      },
-      {
-        "name": "download",
-        "display": "Download Button",
         "width": "half",
         "showCode": false
       }

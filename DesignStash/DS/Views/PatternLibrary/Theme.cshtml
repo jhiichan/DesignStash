@@ -3,6 +3,16 @@
     <link href="~/External_Library/@ViewBag.Project/@ViewBag.Project-styles.min.css" rel="stylesheet" />
 }
 
+<div>
+    <h2>How to Use</h2>
+    <ol>
+        <li>Deploy this Web App.</li>
+        <li>Add the minified stylesheet <span class="pl-inline-code">{{ getMinifiedURL('@ViewBag.Project', 'style') }}</span> in your website.</li>
+        <li>Add the minified javascript <span class="pl-inline-code">{{ getMinifiedURL('@ViewBag.Project', 'script') }}</span>  in your website</li>
+        <li>Start copying the code from below.</li>
+    </ol>
+</div>
+
 <div ng-controller="PatternsController as patternsCtrl" ng-init="patternsCtrl.init('@ViewBag.Project', 'atoms')">
     <div class="pl-group-container" ng-repeat="pattern in patternsCtrl.patterns">
         <div id="pl-{{pattern.group}}" class="pl-group-text">{{pattern.display}}</div>
@@ -73,5 +83,5 @@
 </div>
 
 @section Scripts {
-    <script src="~/External_Library/@ViewBag.Project/@ViewBag.Project-scripts.min.js"></script>
+    <script src="~/External_Library/@ViewBag.Project/@ViewBag.Project-theme.min.js"></script>
 }

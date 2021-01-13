@@ -148,4 +148,13 @@
     width: 100%;
 }
 
+span.pl-inline-code {
+    padding: 0 5px;
+    font-size: 12px;
+    font-family: source-code-pro, monospace;
+    background-color: #353535;
+    color: #e8b1ff;
+    vertical-align: middle;
+}
+
 /* Override Material */

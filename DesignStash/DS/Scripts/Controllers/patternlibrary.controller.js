@@ -19,6 +19,13 @@
     PatternLibraryController.$inject = ['$scope', '$timeout', '$mdSidenav'];
     
     function PatternLibraryController($scope, $timeout, $mdSidenav) {
+
+        $scope.getMinifiedURL = function (projectName, minifiedType) {
+            var suffixURL = minifiedType == 'style' ? '-styles.min.css' : '-theme.min.js';
+            var minifiedURL = window.location.origin + '/External_Library/' + projectName + '/' + projectName + suffixURL
+            return minifiedURL;
+        };
+
         $scope.toggleSideNavLeft = function (componentID) {
             $mdSidenav(componentID).toggle();
         };

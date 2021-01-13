@@ -1,3 +1,20 @@
 ﻿[
-
+  {
+    "group": "textbuttonswicon",
+    "display": "Text Buttons with Icon",
+    "components": [
+      {
+        "name": "gotosite",
+        "display": "Go To Button",
+        "width": "half",
+        "showCode": false
+      },
+      {
+        "name": "download",
+        "display": "Download Button",
+        "width": "half",
+        "showCode": false
+      }
+    ]
+  }
 ]
